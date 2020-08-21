@@ -36,9 +36,50 @@
             </ul>
         
         </div>
+         <span class="navbar-text">
+                    <a data-toggle="modal" href="#loginModal" class="nav-link">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span>
         </div>
 
     </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close align-self-center" data-dismiss="modal">&times;</button>
+                    
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" name="exampleInputEmail3" id="exampleInputEmail3" class="form-control form-control-sm mr-1" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" name="exampleInputPassword3" id="exampleInputPassword3" class="form-control form-control-sm" placeholder="Enter Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" name="rememberme" id="rememberme" class="form-check-input">
+                                    <label for="rememberme" class="form-check-label"><strong>Remember Me</strong></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-4 offset-sm-8">
+                                <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success btn-lg">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="row-header">
         <div class="jumbotron" >
@@ -53,7 +94,9 @@
                     <img src="img/logo.png" alt="logo" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#reserve" class="btn btn-warning btn-lg btn-block" role="button">Reserve a Table</a>
+                    <a href="#reserve" class="btn btn-warning btn-lg btn-block" role="button"
+                    data-toggle="tooltip" data-html="true" title="Or Call us at<br><strong>+852 12345678</strong> " data-placement="bottom" id="tooltip-top"
+                    >Reserve a Table</a>
                 </div>
             </div>
             </div>
@@ -217,6 +260,16 @@
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded",function(){
+             $('[data-toggle="tooltip"]').tooltip();
+         });
+    </script> -->
 
 </body>
 
